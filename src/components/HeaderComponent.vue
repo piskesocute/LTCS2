@@ -1,10 +1,14 @@
 <script setup>
 const infiniteAnimation = ref(false);
 
-onMounted(() => {
+const setAnimationTimeout = () => {
   setTimeout(() => {
     infiniteAnimation.value = true;
   }, 2000);
+};
+
+onMounted(() => {
+  setAnimationTimeout();
 });
 </script>
 

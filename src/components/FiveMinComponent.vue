@@ -141,8 +141,4 @@
     ></div>
   </section>
 </template>
-<style lang="scss" scoped>
-// * {
-//   outline: 1px solid;
-// }
-</style>
+<style lang="scss" scoped></style>

@@ -132,7 +132,7 @@ onUnmounted(() => {
       <div class="relative mt-[24px] overflow-hidden rounded-tl-[40px] md:mt-[32px]">
         <button
           type="button"
-          class="bg-main justufy-center xs:h-[48px] xs:w-[48px] absolute right-[40px] top-1/2 z-[11] h-[32px] w-[32px] flex items-center lg:right-[200px] md:right-[80px] md:h-auto md:w-auto"
+          class="bg-main justufy-center absolute right-[40px] top-1/2 z-[11] h-[32px] w-[32px] flex items-center lg:right-[200px] md:right-[80px] md:h-auto md:w-auto xs:h-[48px] xs:w-[48px]"
           @click="slideCtrl(1)"
         >
           <img src="../assets/images/slidebutton.png" class="block h-auto max-w-full" alt="" />
@@ -141,10 +141,10 @@ onUnmounted(() => {
           <li
             v-for="(item, index) in copyData"
             :key="item"
-            class="test xs:left-[calc(-500px*3)] relative left-[calc(-322px*3)] lg:left-[calc(-900px*3)] md:left-[calc(-700px*3)] sm:left-[calc(-600px*3)] xl:left-[calc(-955px*3)]"
+            class="carousel-items relative left-[calc(-322px*3)] lg:left-[calc(-900px*3)] md:left-[calc(-700px*3)] sm:left-[calc(-600px*3)] xl:left-[calc(-955px*3)] xs:left-[calc(-500px*3)]"
           >
             <div
-              class="xs:w-[500px] relative h-auto w-[322px] lg:w-[900px] md:w-[700px] sm:w-[600px] xl:w-[955px]"
+              class="relative h-auto w-[322px] lg:w-[900px] md:w-[700px] sm:w-[600px] xl:w-[955px] xs:w-[500px]"
             >
               <div class="mask absolute left-0 top-0 z-[1] h-full w-full"></div>
               <img class="max-w-full object-cover" :src="originData[item.ref].url" alt="" />
@@ -192,7 +192,7 @@ onUnmounted(() => {
       </div>
       <template v-for="(item, index) in copyData" :key="item">
         <div
-          class="xs:w-[500px] mt-16px h-auto w-[322px] md:hidden lg:w-[900px] md:w-[700px] sm:w-[600px] xl:w-[955px]"
+          class="mt-16px h-auto w-[322px] md:hidden lg:w-[900px] md:w-[700px] sm:w-[600px] xl:w-[955px] xs:w-[500px]"
           v-if="index === 3"
         >
           <h3 class="text-block text-[20px] font-semibold leading-[28px]">
@@ -202,7 +202,7 @@ onUnmounted(() => {
             {{ originData[item.ref]?.title2 }}
           </h3>
           <p
-            class="text-block xs:line-clamp-1 line-clamp-2 whitespace-pre-wrap text-[14px] font-normal leading-[25.6px] tracking-[1.6px]"
+            class="text-block line-clamp-2 whitespace-pre-wrap text-[14px] font-normal leading-[25.6px] tracking-[1.6px] xs:line-clamp-1"
           >
             {{ originData[item.ref]?.description }}
           </p>
@@ -245,23 +245,23 @@ onUnmounted(() => {
   opacity: 0;
   z-index: -5;
 }
-.test {
+.carousel-items {
   opacity: 0;
   z-index: -3;
 }
-.test:nth-child(2) {
+.carousel-items:nth-child(2) {
   opacity: 1;
   z-index: -2;
 }
-.test:nth-child(3) {
+.carousel-items:nth-child(3) {
   opacity: 1;
   z-index: -1;
 }
-.test:nth-child(4) {
+.carousel-items:nth-child(4) {
   opacity: 1;
   z-index: 1;
 }
-.test:nth-child(5) {
+.carousel-items:nth-child(5) {
   opacity: 1;
   z-index: 2;
 }
